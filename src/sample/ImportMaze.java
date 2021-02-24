@@ -13,11 +13,12 @@ public class ImportMaze {
     File maze;
     String text;
     int[][] mazeMatrix;
-    public ImportMaze(int[][] matrix){
-        this.mazeMatrix = matrix;
+    public ImportMaze(int columns, int rows){
+        this.mazeMatrix = new int[rows][columns];
 
     }
-    public void ReadFile() throws FileNotFoundException {
+
+    public int[][] ReadFile() throws FileNotFoundException {
         FileChooser fileChooser = new FileChooser();
 
         FileChooser.ExtensionFilter extFilterTXT = new FileChooser.ExtensionFilter("Text files (*.txt)", "*.TXT");
@@ -35,6 +36,8 @@ public class ImportMaze {
             }
         }
         System.out.println(Arrays.deepToString(mazeMatrix));
+        return mazeMatrix;
+
 
     }
 }

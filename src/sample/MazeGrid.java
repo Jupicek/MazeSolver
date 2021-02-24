@@ -19,6 +19,7 @@ public class MazeGrid extends Pane {
         cell.setWidth(50);
         cell.setHeight(50);
 
+        cells[row][column] = cell;
         getChildren().add(cell);
     }
 }
