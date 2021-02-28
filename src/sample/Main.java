@@ -13,8 +13,10 @@ public class Main extends Application {
     int rows = 5;
     int columns = 5;
 
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+
 
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");

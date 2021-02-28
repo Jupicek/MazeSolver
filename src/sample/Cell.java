@@ -6,7 +6,9 @@ import javafx.scene.shape.Rectangle;
 public class Cell extends Rectangle {
     int row;
     int column;
-    int state;
+    int wall = 0;
+    int start = 0;
+    int finnish = 0;
 
 
     public Cell(int row, int column)
@@ -19,10 +21,12 @@ public class Cell extends Rectangle {
     public void WallChange()
     {
         this.setFill(Color.BLACK);
+        wall = 1;
     }
     public void FieldChange()
     {
         this.setFill(Color.WHITE);
+        wall = 0;
     }
 
-    }
+}
